@@ -1,10 +1,15 @@
+'use client';
 import Image from "next/image";
 import styles from "./page.module.css";
+import {IntlProvider, NodeMessages} from "@ory/elements";
 
 export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
+        <IntlProvider>
+          <NodeMessages/>
+        </IntlProvider>
         <Image
           className={styles.logo}
           src="https://nextjs.org/icons/next.svg"
